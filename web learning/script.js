@@ -87,8 +87,40 @@ if(bank){
 else{
     console.log("khali");
 }
-//1:56
 
+// //prompt
+// let winningNumber=10;
+// // let userGuess=prompt("best performer messi / mbappa");
+// let userGuess=+prompt("best performer messi / mbappa");
+// //prompt is takeing input in string
+// console.log(typeof userGuess,userGuess);
+// //if elseif ,switch just remember ==(don't check data type)
+// //=== also checks data type
 
+//loops
+let i=0;
+while(i<=3){
+    console.log(i);
+    i++;
+}
+console.log("break");
+for(let j=6;j<=7;j++)console.log(j);
+console.log("break");
+do{
+    console.log(i);
+    i++;
+}while(i<6);//runs atleast once
 
-
+//array->any data type can be stored //mutable
+let fruits=["apple","mango",3,null,undefined];
+console.log(fruits);
+console.log(fruits[2]);
+fruits[2]="three";
+let remove=fruits.pop();//stored->.shift also do same
+fruits.push("banana");
+fruits.unshift("banana")
+console.log(fruits);
+console.log(typeof fruits);
+console.log(Array.isArray(fruits));//to identify is array or not
+//array is reference type and called object
+//push and pop are fast coz of operation on last vs first unshift and shift
