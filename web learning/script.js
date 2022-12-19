@@ -171,5 +171,25 @@ console.log("better way to copy");
 console.log(myval);
 console.log(myval2);
 console.log(myNewArray);
-//357
+
+//objects->don't have index ->reference type ->key value pair
+const key="email";
+const person={nome:"Ankit",umage:19,
+        hobbies:["boobi"],
+        type:["joking"],
+        //we have to add strings
+        "person help":"sleep"
+};
+person[key]="ankit@gmial.com";
+person["key"]="nainankit.com";
+person.gender="male";
+console.log(person);
+console.log(person.name);
+console.log(person.age);
+
+//iteration in object
+for(let itr of Object.keys(person)){
+    console.log(person[key]);
+    console.log(key);
+}
 
