@@ -124,3 +124,52 @@ console.log(typeof fruits);
 console.log(Array.isArray(fruits));//to identify is array or not
 //array is reference type and called object
 //push and pop are fast coz of operation on last vs first unshift and shift
+
+let array2=fruits;
+//here we know fruits store address of apple and array2 gets same address pass by reference
+//any change in fruits lead to change in array2
+
+// diff methods to copy an arrays not reference
+
+// let arr2=fruits.slice(0);//`1`
+let arr2=fruits.slice(0).concat(["items"]);//`1`
+
+let arr3=[].concat(fruits);//`2
+
+// let arr4=[...array2];//spread operator
+let arr4=[...array2,...arr2,"item2","item3"];//spread operator
+
+console.log("fruits" ,fruits);
+fruits.push("he he he")
+console.log("array2" ,array2);
+console.log("arr2" ,arr2);
+console.log("arr3" ,arr3);
+console.log(fruits);
+fruits[4]="nullbadtoref";
+let fruits2=[];
+for(let j=0;j<fruits.length;j++){
+    if(j==3){continue;}
+    fruits2.push(fruits[j].toUpperCase());
+}
+console.log(fruits2);
+//due to reference property const don't impact just we can't reassgn
+//use const in arrays
+
+//for of loop
+// for(let fal of fruits){
+//     console.log(fal);    
+// }
+
+//for in loop
+for(let fal in fruits){
+    console.log(fal);  
+    console.log(fruits[fal]);
+}
+//array destructuring
+let [myval,,myval2,...myNewArray]=fruits;
+console.log("better way to copy");
+console.log(myval);
+console.log(myval2);
+console.log(myNewArray);
+//357
+
