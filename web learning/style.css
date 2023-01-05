@@ -1,3 +1,16 @@
-body{
-    /* background-color: greenyellow; */
+body {
+  /* background-color: greenyellow; */
+}
+#count-el {
+  text-align: center;
+}
+#incre-btn{
+  text-align: center;
+  margin-left: 42%;
+}
+#Save{
+    background-color: cornflowerblue;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 45%;
 }
