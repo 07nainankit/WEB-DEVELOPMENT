@@ -231,3 +231,32 @@ function save(){
 // let fullName=firstName+", "+lastName+"!";
 // console.log(fullName);
 
+//2nd project of calculator
+let n1=8;
+let n2=9;
+let num1El=document.getElementById("num1");
+let num2El=document.getElementById("num2");
+num1El.textContent=n1;
+num2El.textContent=n2;
+let result=document.getElementById("total");
+let ans=0;
+function sumup(){
+    console.log(n2+n1);
+    // ans=num1El+num2El;
+    ans=n1+n2;
+    ans="sum:"+ ans;
+}
+function minus(){
+    ans=n1-n2;
+}
+function xtime(){
+    ans=n1*n2;
+}
+function decri(){
+    ans=n1/n2;
+}
+function show(){
+    result.textContent=ans;
+}
+//building jack
+  
