@@ -102,9 +102,16 @@
       <button id="total" onclick="show()">sum result</button>
 <br>
 <br>
-      <div style="background-color: cadetblue; border: solid;">
-        <h2 >blue<p>black jack</p></h2>
-        
+      <div id="game" style="background-color: cadetblue; border: solid;">
+        <h2 >black jack<p>lets play</p></h2>
+        <div id="core_game">
+            <p id="msg">want to play a round?</p>
+            <br>
+            <p>cards: </p>
+            <br>
+            <p id="sum">sum: </p>
+            <button id="btn"onclick="startgame()">Start Game</button>
+        </div>
       </div>
       <script src="script.js"></script>
   </body>

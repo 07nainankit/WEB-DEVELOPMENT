@@ -14,3 +14,21 @@ body {
     margin-top: 20px;
     margin-left: 45%;
 }
+#game{
+  text-align: center;
+}
+#btn{
+  background-color: gold;
+  border-radius: 5px;
+}
+#core_game{
+  /* background-image: url("images/table.png") ; */
+  width: 500px;
+  height: 200px;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  background-color: black;
+  color: gold;
+}

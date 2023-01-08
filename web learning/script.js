@@ -259,4 +259,29 @@ function show(){
     result.textContent=ans;
 }
 //building jack
-  
+let firstCard=9;
+let secondCard=12;
+let sum = firstCard + secondCard;
+
+let message=document.getElementById("msg");
+let res=document.getElementById("sum");
+// let res=document.querySelector("#sum")
+function startgame(){
+    if(sum<21){
+        // console.log("Do you want to draw a new card?");
+        message.textContent="Do you want to draw a new card?";
+        res.textContent="sum: "+sum;
+    }
+    else if(sum === 21){
+        //3= to check data type too
+        // console.log("boom baby jackpot");   
+        message.textContent="boom baby jackpot";
+        res.textContent="sum: "+sum;
+    }
+    else{
+        // console.log("you are out of the game");
+        message.textContent="you are out of the game";
+        res.textContent="sum: "+sum;
+    }
+}
+
