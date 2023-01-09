@@ -258,30 +258,74 @@ function decri(){
 function show(){
     result.textContent=ans;
 }
+
 //building jack
-let firstCard=9;
+
+let firstCard=Math.floor(ranomno());
 let secondCard=12;
-let sum = firstCard + secondCard;
+let cards=[firstCard,secondCard];
+// let sum = firstCard + secondCard;
+let sum = 0;
 
 let message=document.getElementById("msg");
 let res=document.getElementById("sum");
 // let res=document.querySelector("#sum")
+let pata=document.getElementById("card");
 function startgame(){
+    for(let i=0;i<cards.length;i++){
+        sum+=cards[i];
+    }
     if(sum<21){
         // console.log("Do you want to draw a new card?");
         message.textContent="Do you want to draw a new card?";
         res.textContent="sum: "+sum;
+        // pata.textContent="cards:"+firstCard+" "+secondCard;
+        pata.textContent="cards:"+cards[0]+" "+cards[0];
     }
     else if(sum === 21){
         //3= to check data type too
         // console.log("boom baby jackpot");   
         message.textContent="boom baby jackpot";
         res.textContent="sum: "+sum;
+        pata.textContent="cards:"+cards;
     }
     else{
         // console.log("you are out of the game");
         message.textContent="you are out of the game";
         res.textContent="sum: "+sum;
+        // pata.textContent="cards:"+firstCard+" "+secondCard;
+        pata.textContent="cards: "
+        for(let i=0;i<cards.length;i++){
+            pata.textContent+=cards[i];
+        }
     }
 }
 
+//use of array in the first/second card
+
+// let aboutme=["ankit",19,true];
+// console.log(aboutme[2]);
+// aboutme.push(2030);
+// console.log(aboutme);
+// aboutme.pop();
+
+//getting random input
+function ranomno(){
+    //math.random 0-1 not including 1 like 0.999... is max
+    // return Math.random();
+   
+    //(1-13)
+    // return Math.floor(Math.random()*12)+1;   
+
+    let ans=Math.floor(Math.random()*12)+1;
+    if(ans===1)return 11;
+    else if(ans>=11 || ans<=13){
+        return 10;
+    }   
+    else{
+        return ans;
+    }
+}
+//to tackle the problem of 0. no use-> *x / math.floor /+1
+
+//prefer to use proper names like sumEl for dom and sum-el for id 
