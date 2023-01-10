@@ -261,8 +261,10 @@ function show(){
 
 //building jack
 
-let firstCard=Math.floor(ranomno());
-let secondCard=12;
+let hasSolvedChallenge=false;
+let isAlive=true;
+let firstCard=ranomno();
+let secondCard=9;
 let cards=[firstCard,secondCard];
 // let sum = firstCard + secondCard;
 let sum = 0;
@@ -271,6 +273,7 @@ let message=document.getElementById("msg");
 let res=document.getElementById("sum");
 // let res=document.querySelector("#sum")
 let pata=document.getElementById("card");
+
 function startgame(){
     for(let i=0;i<cards.length;i++){
         sum+=cards[i];
@@ -283,6 +286,7 @@ function startgame(){
         pata.textContent="cards:"+cards[0]+" "+cards[0];
     }
     else if(sum === 21){
+        hasSolvedChallenge=true;
         //3= to check data type too
         // console.log("boom baby jackpot");   
         message.textContent="boom baby jackpot";
@@ -291,6 +295,7 @@ function startgame(){
     }
     else{
         // console.log("you are out of the game");
+        isAlive=false;
         message.textContent="you are out of the game";
         res.textContent="sum: "+sum;
         // pata.textContent="cards:"+firstCard+" "+secondCard;
@@ -317,15 +322,70 @@ function ranomno(){
     //(1-13)
     // return Math.floor(Math.random()*12)+1;   
 
-    let ans=Math.floor(Math.random()*12)+1;
-    if(ans===1)return 11;
-    else if(ans>=11 || ans<=13){
-        return 10;
-    }   
-    else{
-        return ans;
+    if(isAlive && hasSolvedChallenge!=true){
+        let ans=Math.floor(Math.random()*12)+1;
+        if(ans===1)return 11;
+        else if(ans>=11 || ans<=13){
+            return 10;
+        }   
+        else{
+            return ans;
+        }
     }
 }
 //to tackle the problem of 0. no use-> *x / math.floor /+1
 
 //prefer to use proper names like sumEl for dom and sum-el for id 
+
+//showing score of particular player using class
+
+let player = {
+    name:"ankit",
+    score:142,
+    sayHello: function(){
+        console.log("hey");
+    }
+}
+console.log(player.name);
+console.log(player["score"]);
+let playerEl=document.getElementById("player-el");
+
+playerEl.textContent=player["name"]+": "+player["score"];
+//so we have created our on function
+player.sayHello();
+
+//homework
+// let person={
+//     name:"ankit",
+//     age:19,
+//     country:"India",
+// }
+// function logData(){
+//     console.log(person.name+" is "+person.age+" years old and lives in "+ person.country);
+// }
+// logData();
+
+
+//push pop for end and for begin shift unshift
+
+// let arr=[1,2,3,4];
+// arr.pop();
+// arr.push(5);
+// arr.shift();
+// arr.unshift(0);
+// console.log(arr);
+//can be remembered by the more no of words used 
+
+//how to randomly take input from our data
+let hands=["rock","paaper","seasor"];
+function index(){
+    return Math.floor(Math.random()*3);
+    //3 so range 0 to 2;
+}
+console.log(index());
+// console.log(index());
+// console.log(index());
+// console.log(index());
+// console.log(index());
+
+console.log(hands[index()]);
