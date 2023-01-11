@@ -389,3 +389,9 @@ console.log(index());
 // console.log(index());
 
 console.log(hands[index()]);
+
+//crome extension
+
+//we use const for data not to be changed like const name="ankit";
+//how to take input from user -> doc.gebi().val;
+//535
