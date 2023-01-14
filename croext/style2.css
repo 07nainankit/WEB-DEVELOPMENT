@@ -1,0 +1,33 @@
+input{
+    padding: 10px;
+    /* 100% +10px(left)+10px(left) */
+    width: 100%;
+    box-sizing: border-box ;
+
+    margin: 4px;
+}
+button{
+    color: white;
+    background-color: rgb(104, 160, 19);
+    padding: 10px 20px;
+    font-weight: bold;
+}
+ul{
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+}
+li{
+    margin-top: 5px;
+}
+/* only to target specific  li a else a  */
+li a{
+    color:#5f9341
+}
+ /* body{
+    background-image:url(croext\image2\heart_4x3.webp); 
+    background-color: blueviolet;
+    background-image: url("images.png") ;
+    
+ background-repeat: no-repeat; 
+}   */
