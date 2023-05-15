@@ -1,27 +1,29 @@
 body {
   /* background-color: greenyellow; */
+  background-color: white !important;
+  /* margin: 100px; */
 }
 #count-el {
   text-align: center;
 }
-#incre-btn{
+#incre-btn {
   text-align: center;
   margin-left: 42%;
 }
-#Save{
-    background-color: cornflowerblue;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 45%;
+#Save {
+  /* background-color: cornflowerblue; */
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 45%;
 }
-#game{
+#game {
   text-align: center;
 }
-#btn{
-  background-color: gold;
+#btn {
+  /* background-color: gold; */
   border-radius: 5px;
 }
-#core_game{
+#core_game {
   /* background-image: url("images/table.png") ; */
   width: 500px;
   height: 200px;
@@ -30,5 +32,5 @@ body {
   margin-right: 100px;
   margin-bottom: 50px;
   background-color: black;
-  color: gold;
+  /* color: gold; */
 }
